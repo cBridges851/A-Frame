@@ -6,11 +6,11 @@ This folder is for the first section of the Codecademy course. Here, I learnt ab
 
 ### Components
 There are few components the types can contain:
-**Position** - this must be included to allow the shape to be shown on the screen. Formatted x y z. Unit is metres.
-**Color** - can be as word, Hex or RGB
-**Width**
-**Length**
-**Height**
-**Radius**
-**Rotation** - the way the shape is rotated - x y z rotation in degrees.
-**Scale** - defines shrinking, stretching or skewing transformation of an entity - 3 scaling factors for x y z
+**Position** - this must be included to allow the shape to be shown on the screen. Formatted x y z. Unit is metres.|
+**Color** - can be as word, Hex or RGB|
+**Width**|
+**Length**|
+**Height**|
+**Radius**|
+**Rotation** - the way the shape is rotated - x y z rotation in degrees.|
+**Scale** - defines shrinking, stretching or skewing transformation of an entity - 3 scaling factors for x y |
