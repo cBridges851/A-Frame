@@ -14,3 +14,10 @@ There are few components the types can contain:
 **Radius**|
 **Rotation** - the way the shape is rotated - x y z rotation in degrees.|
 **Scale** - defines shrinking, stretching or skewing transformation of an entity - 3 scaling factors for x y |
+
+## Building Scenes Folder
+This will be added to as there's not much in it at the moment. It's basically about creating the VR environment, such as by adding textures to shapes and audio.
+### OutOfBoxEnvironments.html
+Shows an example environment that's already been created (hence why it is 'out of box')
+###llynclys.html
+This is just me messing with the background. Uses an image of the railway I used to go to (https://upload.wikimedia.org/wikipedia/commons/d/df/LlynclysSouth01.jpg). While it's a lovely image, it's not the best for continuity!
