@@ -5,11 +5,43 @@
 	
 	<body>
 		<a-scene> <!--This element contains every entity and sets up a 3D scene in the browser.-->
-			<a-sphere
-				position='-1 0.5 -3'
-				color = #FF0000
-				radius = '1.25'>  
-			</a-sphere>
+			<a-box 
+				color = "#689F38"
+				position = "0 1 -7"
+				width = "4"
+				height="2"
+				depth="0.2"
+				rotation="90 0 0"
+				scale="-1 1 2">
+				
+				<a-circle 
+					color="#333333"
+					side="double"
+					position="2 0 0"
+					rotation="90 0 0">
+				</a-circle>
+			</a-box>
+			
+			<a-circle
+				color="yellow"
+				side="double"
+				position="-2 1 -8"
+				scale="2 2 1">
+			</a-circle>
+			
+			<a-cylinder
+				color="#616161"
+				height="2"
+				radius="2"
+				segments-radial="6"
+				open-ended="true"
+				side="double"
+				position="0 1 0"
+				rotation="0 -90 90"
+				scale="2 1 2">
+				<!--If scaling, bear in mind if you rotated first-->
+				<!--Reflection if using negative-->
+			</a-cylinder>
 		</a-scene>
 	</body>
 </html>
