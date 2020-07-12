@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	</head>
+	
+	<body>
+		<!--textures.com - source of images-->
+		<a-scene> <!--This element contains every entity and sets up a 3D scene in the browser.-->
+			<a-assets>
+				<img src="TexturesCom_DustOverlay_overlay_M.png" crossorigin="anonymous" id="customTexture">
+			</a-assets>
+			
+			<a-box
+				src="#customTexture"
+				color="#8EAC88"	
+				width="4"
+				height="4"
+				depth="4"
+				position="-2 1.5 -9"
+				>
+			</a-box>
+			
+			<a-box
+				width="4"
+				height="4"
+				depth="4"
+				position="2 1.5 -9"
+				color="#795548">
+			</a-box>
+		</a-scene>
+	</body>
+</html>
