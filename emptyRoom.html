@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	</head>
+	
+	<body>
+		<!--textures.com - source of images-->
+		<a-scene> <!--This element contains every entity and sets up a 3D scene in the browser.-->
+			<a-assets>
+				<img src="data:image/jpeg;base64,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" crossorigin="anonymous" id="sky">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRfHViA83yeCs5H4e3myOZVN8fgXgPAmPKicg&usqp=CAU" id="wallpaper" crossorigin="anonymous">
+				
+				<img src="https://media.istockphoto.com/photos/vibrant-neon-bright-grunge-texture-in-80s-style-picture-id1097316980?k=6&m=1097316980&s=612x612&w=0&h=lwr4NhdH1qIFH6TwYevPs6jh4lpCCSYIyDFxrek0KeI=" id="carpet" crossorigin="anonymous">
+			</a-assets>
+			
+			<a-sky
+				src="#sky">
+			</a-sky>
+			<a-box
+				src="#wallpaper"
+				width="20"
+				height="7"
+				depth="2"
+				position="0 0 3"
+				>
+			</a-box>
+			
+		
+			<a-box
+				src="#wallpaper"
+				width="20"
+				height="7"
+				depth="2"
+				rotation="0 90 0"
+				position="-10 0 -6"
+				>
+			</a-box>
+			
+			
+			<a-box
+				src="#wallpaper"
+				width="20"
+				height="7"
+				depth="2"
+				rotation="0 90 0"
+				position="10 0 -6"
+				>
+			</a-box>
+			
+			
+			<a-box
+				src="#wallpaper"
+				width="20"
+				height="7"
+				depth="2"
+				rotation="0 0 0"
+				position="0 0 -17"
+				>
+			</a-box>
+			
+			
+			<a-plane
+				src="#carpet"
+				position = "-1 -13 -20"
+				rotation = "-90 0 0"
+				width = "60" height = "60">
+			</a-plane>
+			
+		</a-scene>
+	</body>
+</html>
