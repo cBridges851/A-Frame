@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> 
+	</head>
+	
+	<body>
+		<!--https://poly.google.com/view/5Wb8VjhKy5T-->
+		<!--textures.com - source of images-->
+		<a-scene> <!--This element contains every entity and sets up a 3D scene in the browser.-->
+			<a-assets>
+				<img src="./sky.jpg" crossorigin="anonymous" id="sky">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRfHViA83yeCs5H4e3myOZVN8fgXgPAmPKicg&usqp=CAU" id="wallpaper" crossorigin="anonymous">
+				<a-asset-item id="cityModel" src="../objects/model.gltf"></a-asset-item>
+				<img src="./snow-texture.jpg" id="ground" crossorigin="anonymous">
+			</a-assets>
+			
+			<a-entity position="0 20 0" particle-system="preset: snow; particleCount: 5000;"></a-entity>
+
+			<a-text
+				value="Merry Christmas Everyone!"
+				position = "-1.3 4.5 -5"
+				color="#FFFFFF">
+			</a-text>
+
+			<a-box 
+				width="5.5"
+				height="2"
+				depth="0"
+				position = "0 7 -10"
+				rotation = "0 0 0"
+				color = #FF0000>
+			</a-box>
+
+			<a-sky
+				src="#sky">
+			</a-sky>
+
+
+			<a-plane
+				src="#ground"
+				position = "-1 -13 2"
+				rotation = "-90 0 0"
+				width = "1000" height = "1000">
+			</a-plane>
+			
+			<a-entity gltf-model="#cityModel" modify-materials
+			position="0 0 -10"
+			height="10"></a-entity>
+		</a-scene>
+	</body>
+</html>
