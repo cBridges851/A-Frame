@@ -1,52 +1,110 @@
 <html>
-	<head>
-		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-		<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> 
-	</head>
-	
-	<body>
-		<!--https://poly.google.com/view/5Wb8VjhKy5T-->
-		<!--textures.com - source of images-->
-		<a-scene> <!--This element contains every entity and sets up a 3D scene in the browser.-->
-			<a-assets>
-				<img src="./sky.jpg" crossorigin="anonymous" id="sky">
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRfHViA83yeCs5H4e3myOZVN8fgXgPAmPKicg&usqp=CAU" id="wallpaper" crossorigin="anonymous">
-				<a-asset-item id="cityModel" src="../objects/model.gltf"></a-asset-item>
-				<img src="./snow-texture.jpg" id="ground" crossorigin="anonymous">
-			</a-assets>
-			
-			<a-entity position="0 20 0" particle-system="preset: snow; particleCount: 5000;"></a-entity>
 
-			<a-text
-				value="Merry Christmas Everyone!"
-				position = "-1.3 4.5 -5"
-				color="#FFFFFF">
-			</a-text>
-
-			<a-box 
-				width="5.5"
-				height="2"
-				depth="0"
-				position = "0 7 -10"
-				rotation = "0 0 0"
-				color = #FF0000>
-			</a-box>
-
-			<a-sky
-				src="#sky">
-			</a-sky>
+<head>
+	<title>Merry Christmas!</title>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script
+		src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+	<script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
+	<script>
+			AFRAME.registerComponent('ribbon', {
+				init: function () {
+					let x = 0, y = 0;
+                    let points = [];
+                    // A
+                    points.push(new THREE.Vector2(0, 0));
+                    // B
+                    points.push(new THREE.Vector2(20, 0));
+                    // C
+                    points.push(new THREE.Vector2(19, -1));
+                    // D
+                    points.push(new THREE.Vector2(20, -2));
+                    // E
+                    points.push(new THREE.Vector2(0, -2));
+                    // F
+                    points.push(new THREE.Vector2(1, -1));
 
 
-			<a-plane
-				src="#ground"
-				position = "-1 -13 2"
-				rotation = "-90 0 0"
-				width = "1000" height = "1000">
-			</a-plane>
-			
-			<a-entity gltf-model="#cityModel" modify-materials
-			position="0 0 -10"
-			height="10"></a-entity>
-		</a-scene>
-	</body>
+					for (var i = 0; i < points.length; i++) {
+						points[i].multiplyScalar(0.25);
+					}
+					let RibbonShape = new THREE.Shape(points);
+
+
+
+					let geometry = new THREE.ShapeGeometry(RibbonShape);
+					let material = new THREE.MeshBasicMaterial({ color: 0xB92636 });
+					let mesh = new THREE.Mesh(geometry, material);
+					this.el.object3D.add(mesh);
+				}
+			});
+
+	</script>
+</head>
+
+<body>
+	<!--https://poly.google.com/view/5Wb8VjhKy5T-->
+	<!--https://poly.google.com/view/0DiDQUcuv1d-->
+	<!--https://poly.google.com/view/7DbOKA1uXfK-->
+	<!--https://poly.google.com/view/8wyQNiCKMBP-->
+	<!--https://poly.google.com/view/9pCN2e99jcs-->
+	<!--https://poly.google.com/view/fTQnwgjpcuv-->
+	<!--https://poly.google.com/view/5hrwvzpCArU-->
+	<a-scene>
+		<!--This element contains every entity and sets up a 3D scene in the browser.-->
+		<a-assets>
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRfHViA83yeCs5H4e3myOZVN8fgXgPAmPKicg&usqp=CAU"
+				id="wallpaper" crossorigin="anonymous">
+			<a-asset-item id="tree" src="../objects/tree/model.gltf"></a-asset-item>
+			<a-asset-item id="snowman" src="../objects/snowman/model.gltf"></a-asset-item>
+			<a-asset-item id="candy-cane" src="../objects/candy-cane/275_Candy Cane.gltf"></a-asset-item>
+			<a-asset-item id="present-red-yellow-square" src="../objects/present-red-yellow-square/model.gltf">
+			</a-asset-item>
+			<a-asset-item id="santa-sleigh" src="../objects/santa-sleigh/SantaRides.gltf"></a-asset-item>
+			<a-asset-item id="present-green-red-square" src="../objects/present-green-red-square/model.gltf">
+			</a-asset-item>
+			<img src="./snow-texture.jpg" id="ground" crossorigin="anonymous">
+			<img src="./star.jpg" id="star" crossorigin="anonymous">
+		</a-assets>
+
+		<a-light type="ambient" color="#AAA"></a-light>
+
+		<a-entity position="0 20 0" particle-system="preset: snow; particleCount: 5000;"></a-entity>
+
+		<a-sky color="#0C1445"></a-sky>
+		<a-entity star-system></a-entity>
+
+		<a-plane src="#ground" position="-1 -13 2" rotation="-90 0 0" color="#B9B9B9" width="1000" height="1000">
+		</a-plane>
+
+		<a-entity gltf-model="#tree" modify-materials position="-30 -97 -50" rotation="0 275 0" scale="100 100 100">
+		</a-entity>
+
+		<a-entity gltf-model="#snowman" modify-materials position="20 26 -15" rotation="0 230 0" scale="20 20 20">
+		</a-entity>
+
+		<a-entity gltf-model="#snowman" modify-materials position="-10 26 -30" rotation="0 330 0" scale="20 20 20">
+		</a-entity>
+
+		<a-entity gltf-model="#candy-cane" modify-materials position="7 -10 -25" rotation="0 130 10"
+			scale="0.2 0.2 0.2"></a-entity>
+
+		<a-entity gltf-model="#candy-cane" modify-materials position="-7 -10 -25" rotation="0 55 10"
+			scale="0.2 0.2 0.2"></a-entity>
+
+		<a-entity gltf-model="#present-red-yellow-square" modify-materials position="-12 -18 -13" rotation="0 55 9"
+			scale="10 10 8"></a-entity>
+
+		<a-entity gltf-model="#present-green-red-square" modify-materials position="20 -18 -18" rotation="0 110 10"
+			scale="10 10 8"></a-entity>
+
+		<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Merry Christmas Everyone!; width: 10;"
+			position="2.25 -1.2 -5" rotation="-30 0 0"></a-entity>
+
+		<a-entity position="-5 -1 -5.2" 
+		rotation="-30 0 0" scale="2 2 1.5" ribbon></a-entity>
+
+	</a-scene>
+</body>
+
 </html>
