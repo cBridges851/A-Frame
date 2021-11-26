@@ -1,0 +1,52 @@
+{
+    "planets": [
+        {
+            "name": "Mercury",
+            "src": "#mercury",
+            "radius": "0.25",
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+        },
+        {
+            "name": "Venus",
+            "src": "#venus",
+            "radius": "0.5",
+            "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000"
+        },
+        {
+            "name": "Earth",
+            "src": "#earth",
+            "radius": "0.5",
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+        },
+        {
+            "name": "Mars",
+            "src": "#mars",
+            "radius": "0.25",
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+        },
+        {
+            "name": "Jupiter",
+            "src": "#jupiter",
+            "radius": "1",
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+        },
+        {
+            "name": "Saturn",
+            "src": "#saturn",
+            "radius": "0.8",
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+        },
+        {
+            "name": "Uranus",
+            "src": "#uranus",
+            "radius": "0.75",
+            "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000"
+        },
+        {
+            "name": "Neptune",
+            "src": "#neptune",
+            "radius": "0.75",
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+        }
+    ]
+}
