@@ -1,113 +1,86 @@
 <html>
-<head>
+  <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <a-scene background="color: #000000">
-        <a-assets>
-          <!--Planets-->
-          <img 
-            id="sun"
-            src="sun.jpg" />
-          <img 
-            id="mercury"
-            src="mercury.jpg" />
-          <img 
-            id="venus"
-            src="venus.jpg" />
-          <img 
-            id="earth"
-            src="earth.jpg" />
-          <img 
-            id="mars"
-            src="mars.jpg" />
-          <img 
-            id="jupiter"
-            src="jupiter.jpg" />
-          <img 
-            id="saturn"
-            src="saturn.jpg" />
-          <img 
-            id="uranus"
-            src="uranus.jpg" />
-          <img 
-            id="neptune"
-            src="neptune.jpg" />
-          <!--Sky-->
-          <audio
-            id="background" 
-            src="space.wav">
-          </audio>
-        </a-assets>
-        <a-entity star-system></a-entity>
-        <a-light
-          type="ambient"
-          position="-25 3 -10`"></a-light>
-        <a-sound 
-          src="#background"
-          autoplay="true"></a-sound>
+      <a-assets>
+        <img id="sun" src="sun.jpg" />
+        <img id="mercury" src="mercury.jpg" />
+        <img id="venus" src="venus.jpg" />
+        <img id="earth" src="earth.jpg" />
+        <img id="mars" src="mars.jpg" />
+        <img id="jupiter" src="jupiter.jpg" />
+        <img id="saturn" src="saturn.jpg" />
+        <img id="uranus" src="uranus.jpg" />
+        <img id="neptune" src="neptune.jpg" />
+        <audio id="background" src="space.wav"></audio>
+      </a-assets>
+      <a-entity star-system></a-entity>
+      <a-light type="ambient" position="-25 3 -10`"></a-light>
+      <a-sound src="#background" autoplay="true"></a-sound>
     </a-scene>
     <script>
-    let distance = -20;
-    let planets = [
+      let distance = -20;
+      let planets = [
         {
-            name: "Sun",
-            src: "#sun",
-            radius: "3"
+          name: "Sun",
+          src: "#sun",
+          radius: "3",
         },
         {
-            name: "Mercury",
-            src: "#mercury",
-            radius: "0.25",
-            animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+          name: "Mercury",
+          src: "#mercury",
+          radius: "0.25",
+          animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000",
         },
         {
-            name: "Venus",
-            src: "#venus",
-            radius: "0.5",
-            animation: "property: rotation; to: 0 -360 0; loop: true; dur: 20000"
+          name: "Venus",
+          src: "#venus",
+          radius: "0.5",
+          animation: "property: rotation; to: 0 -360 0; loop: true; dur: 20000",
         },
         {
-            name: "Earth",
-            src: "#earth",
-            radius: "0.5",
-            animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+          name: "Earth",
+          src: "#earth",
+          radius: "0.5",
+          animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000",
         },
         {
-            name: "Mars",
-            src: "#mars",
-            radius: "0.25",
-            animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+          name: "Mars",
+          src: "#mars",
+          radius: "0.25",
+          animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000",
         },
         {
-            name: "Jupiter",
-            src: "#jupiter",
-            radius: "1",
-            rotation: "0 0 0",
-            animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+          name: "Jupiter",
+          src: "#jupiter",
+          radius: "1",
+          rotation: "0 0 0",
+          animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000",
         },
         {
-            name: "Saturn",
-            src: "#saturn",
-            radius: "0.8",
-            animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+          name: "Saturn",
+          src: "#saturn",
+          radius: "0.8",
+          animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000",
         },
         {
-            name: "Uranus",
-            src: "#uranus",
-            radius: "0.75",
-            animation: "property: rotation; to: 0 -360 0; loop: true; dur: 20000"
+          name: "Uranus",
+          src: "#uranus",
+          radius: "0.75",
+          animation: "property: rotation; to: 0 -360 0; loop: true; dur: 20000",
         },
         {
-            name: "Neptune",
-            src: "#neptune",
-            radius: "0.75",
-            animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000"
-        }
-    ];
+          name: "Neptune",
+          src: "#neptune",
+          radius: "0.75",
+          animation: "property: rotation; to: 0 360 0; loop: true; dur: 20000",
+        },
+      ];
 
-    for (let planet of planets) {
+      for (let planet of planets) {
         const sphere = document.createElement("a-sphere");
         const label = document.createElement("a-text");
 
@@ -133,7 +106,7 @@
         aScene.appendChild(sphere);
         aScene.appendChild(label);
         distance += 5;
-    }
+      }
     </script>
-</body>
+  </body>
 </html>
