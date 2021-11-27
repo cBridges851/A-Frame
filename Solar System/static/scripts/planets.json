@@ -40,14 +40,7 @@
             "src": "#saturn",
             "radius": "0.8",
             "position": "5 2 -10",
-            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
-        },
-        {
-            "name": "Uranus",
-            "src": "#uranus",
-            "radius": "0.75",
-            "position": "10 2 -10",
-            "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000",
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
             "rings": [
                 {
                     "color": "#57524A",
@@ -64,6 +57,23 @@
                     "radius_tubular": "0.2",
                     "rotation": "90 0 0", 
                     "scale": "0.44 0.44 0.04"
+                }
+            ]
+        },
+        {
+            "name": "Uranus",
+            "src": "#uranus",
+            "radius": "0.75",
+            "position": "10 2 -10",
+            "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000",
+            "rings": [
+                {
+                    "color": "#FFFFFF",
+                    "segments_tubular": "50",
+                    "radius": "1.5",
+                    "radius_tubular": "0.01",
+                    "rotation": "-10 90 0", 
+                    "scale": "0.75 0.75 0.075"
                 }
             ]
         },

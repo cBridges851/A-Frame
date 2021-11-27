@@ -30,7 +30,7 @@ class SolarSystem {
       for (let planet of planets) {
         for (let ring of planet.rings) {
           const torus = document.createElement("a-torus");
-          torus.setAttribute("position", ring.position);
+          torus.setAttribute("position", planet.position);
           torus.setAttribute("color", ring.color);
           torus.setAttribute("segments-tubular", ring.segments_tubular);
           torus.setAttribute("radius", ring.radius);
