@@ -31,6 +31,7 @@
         .then(jsonResponse => {
           solarSystem.generateSun();
           solarSystem.generatePlanets(jsonResponse["planets"]);
+          solarSystem.generateLabels(jsonResponse["planets"]);
         })
       });
     </script>
