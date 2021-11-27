@@ -1,34 +1,37 @@
-let distance = -20;
-      let planets = [
-        {
-          name: "Sun",
-          src: "#sun",
-          radius: "3",
-        },
-        
-      ];
-
+class SolarSystem {
+    generateSun() {
+      const sun = document.createElement("a-sphere");
+      const label = document.createElement("a-text");
       
+      sun.setAttribute("src", "#sun");
+      sun.setAttribute("position", "-30 1 -10");
+      sun.setAttribute("radius", "3");
 
+      label.setAttribute("value", "Sun");
+      label.setAttribute("color", "#FFEE00");
+      label.setAttribute("position", "-30 5 -10")
+      label.setAttribute("scale", "3 3 3");
+
+      const aScene = document.querySelector("a-scene");
+      aScene.appendChild(sun);
+      aScene.appendChild(label);
+    }
+
+    generatePlanets(planets) {
+      let distance = -20;
       for (let planet of planets) {
+        console.log(planet)
         const sphere = document.createElement("a-sphere");
         const label = document.createElement("a-text");
 
         sphere.setAttribute("src", planet.src);
         sphere.setAttribute("position", `${distance} 1 -10`);
         sphere.setAttribute("radius", planet.radius);
-        sphere.setAttribute("rotation", planet.rotation);
         sphere.setAttribute("animation", planet.animation);
-        sphere.addEventListener("click", () => console.log("Hello"));
 
         label.setAttribute("value", planet.name);
         label.setAttribute("color", "#FFEE00");
-        if (planet.name == "Sun") {
-          label.setAttribute("position", `${distance} 5 -10`);
-        } else {
-          label.setAttribute("position", `${distance} 2.5 -10`);
-        }
-
+        label.setAttribute("position", `${distance} 2.5 -10`);
         label.setAttribute("scale", "3 3 3");
 
         const aScene = document.querySelector("a-scene");
@@ -37,12 +40,5 @@ let distance = -20;
         aScene.appendChild(label);
         distance += 5;
       }
-
-class SolarSystem {
-    constructor() {
-        this.hello = "hello";
-    }
-    generatePlanets() {
-        console.log(this.hello)
     }
 }

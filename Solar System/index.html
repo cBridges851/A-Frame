@@ -3,7 +3,7 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
   </head>
-  <body onload="new SolarSystem().generatePlanets();">
+  <body>
     <a-scene background="color: #000000">
       <a-assets>
         <img id="sun" src="./static/images/sun.jpg" />
@@ -22,5 +22,17 @@
       <a-sound src="#background" autoplay="false"></a-sound>
     </a-scene>
     <script src="./static/scripts/solarSystem.js"></script>
+    <script>
+      window.addEventListener("load", async () => {
+        let solarSystem = new SolarSystem();
+
+        fetch("./static/scripts/planets.json")
+        .then(response => response.json())
+        .then(jsonResponse => {
+          solarSystem.generateSun();
+          solarSystem.generatePlanets(jsonResponse["planets"]);
+        })
+      });
+    </script>
   </body>
 </html>
