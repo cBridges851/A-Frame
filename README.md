@@ -24,3 +24,8 @@ Shows an example environment that's already been created (hence why it is 'out o
 
 ### llynclys.html
 This is just me messing with the background. Uses an image of the railway I used to go to (https://upload.wikimedia.org/wikipedia/commons/d/df/LlynclysSouth01.jpg). While it's a lovely image, it's not the best for continuity!
+
+## Solar System Folder
+This contains the solar system VR scene which is part of the Codecademy course. Contains 8 planets and the sun, in amongst the stars! 
+
+The background sound in this scene is from https://www.nasa.gov/wav/123163main_cas-skr1-112203.wav
