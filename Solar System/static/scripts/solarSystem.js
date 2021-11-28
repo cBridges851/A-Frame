@@ -60,7 +60,6 @@ class SolarSystem {
       positionValues[1] = newHeight.toString();
       let newPositionValues = positionValues.toString();
       newPositionValues = newPositionValues.replaceAll(",", " ");
-      console.log(newPositionValues);
       label.setAttribute("position", newPositionValues);
       label.setAttribute("scale", "3 3 3");
       aScene.appendChild(label);
